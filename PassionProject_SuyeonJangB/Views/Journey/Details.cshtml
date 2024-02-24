@@ -1,0 +1,24 @@
+﻿@model PassionProject_SuyeonJangB.Models.ViewModels.DetailsJourney
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>@Model.SelectedJourney.JourneyTitle</h2>
+<strong>Explain</strong>
+<div>@Model.SelectedJourney.JourneyExplain</div>
+
+<hr />
+<h3>List of Destination</h3>
+<ul>
+    @foreach (var destination in Model.JourneyDestinations)
+    {
+        <li>
+            <h5 >@destination.DestinationName</h5>
+            <div>Category: @destination.DestinationCategory</div>
+            <div>Location: @destination.DestinationLocation</div>
+        </li>
+    }
+</ul>
+
+<a style="margin-top:24px" class="btn btn-light border border-1" href="/Journey/List/@Model.SelectedJourney.TravelerId">Go back to Journey List</a>

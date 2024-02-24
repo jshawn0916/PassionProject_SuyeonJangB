@@ -1,0 +1,22 @@
+﻿@model PassionProject_SuyeonJangB.Models.TravelerDto
+@{
+    ViewBag.Title = "Edit";
+}
+<h2 style="margin-bottom:32px;">Update Traveler</h2>
+<form action="/Traveler/Update/@Model.TravelerId" method="POST">
+    <input type="hidden" name="TravelerId" value="@Model.TravelerId" />
+    <div class="mb-2">
+        <label style="display: block; margin-bottom: 8px; font-weight: bold;">First Name:</label> <input type="text" name="TravelerFirstName" value="@Model.TravelerFirstName" />
+    </div>
+    <div class="mb-2">
+        <label style="display: block; margin-bottom: 8px; font-weight: bold;">Last Name:</label> <input type="text" name="TravelerLastName" value="@Model.TravelerLastName" />
+    </div>
+    <div class="mb-5">
+        <label style="display: block; margin-bottom: 8px; font-weight: bold;">Email:</label> <input type="email" name="TravelerEmail" value="@Model.TravelerEmail" />
+    </div>
+    <div>
+        <input class="btn btn-light border border-1" type="submit" value="Update Traveler" />
+    </div>
+</form>
+
+

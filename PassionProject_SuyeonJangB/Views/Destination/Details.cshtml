@@ -1,0 +1,11 @@
+﻿@model PassionProject_SuyeonJangB.Models.DestinationDto
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2 style="margin-bottom:32px;">@Model.DestinationName</h2>
+<div style="margin-bottom:12px">Category: @Model.DestinationCategory</div>
+<div>Location: @Model.DestinationLocation</div>
+
+<a style="margin-top:24px"class="btn btn-light border border-1" href="/Destination/List">Go back to Destination List</a>

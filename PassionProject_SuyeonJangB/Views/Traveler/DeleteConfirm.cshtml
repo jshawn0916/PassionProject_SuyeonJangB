@@ -1,0 +1,17 @@
+﻿@model PassionProject_SuyeonJangB.Models.TravelerDto
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2 style="margin-bottom:32px;" class="text-danger">Are you sure you want to delete this Traveler?</h2>
+
+<h3>Name: @Model.TravelerFirstName @Model.TravelerLastName</h3>
+<p>Email: @Model.TravelerEmail</p>
+
+
+<div style="display:flex; margin-top:30px;">
+    <a href="/Traveler/List" style="margin-right:24px" class="btn btn-light border border-1">Cancel</a>
+    <form action="/Traveler/Delete/@Model.TravelerId" method="POST">
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+    </form>
+</div>

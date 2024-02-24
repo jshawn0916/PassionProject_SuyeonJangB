@@ -1,0 +1,18 @@
+﻿@model PassionProject_SuyeonJangB.Models.JourneyDto
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2 style="margin-bottom:32px;" class="text-danger">Are you sure you want to delete this Journey?</h2>
+
+
+<h3>Title: @Model.JourneyTitle</h3>
+<p>Explain: @Model.JourneyExplain</p>
+
+<div style="display:flex; margin-top:30px;">
+    <a href="/Journey/List/@Model.TravelerId" style="margin-right:24px" class="btn btn-light border border-1">Cancel</a>
+    <form action="/Journey/Delete/@Model.JourneyId" method="POST">
+        <input type="submit" class="btn btn-danger" value="Delete" />
+    </form>
+</div>
+

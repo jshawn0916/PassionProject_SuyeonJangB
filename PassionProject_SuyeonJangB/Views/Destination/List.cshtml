@@ -1,0 +1,37 @@
+﻿@model IEnumerable<PassionProject_SuyeonJangB.Models.DestinationDto>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<h2 style="margin-bottom:32px;">Destination List</h2>
+<table class="border">
+    <thead>
+        <tr class="bg-light">
+            <th style="padding:10px; width:80%;">JourneyName</th>
+            <th style="padding:10px; width:80%;">Edit</th>
+            <th style="padding:10px; width:80%;">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Destination in Model)
+        {
+            <tr>
+                <td style="padding:10px;">
+                    <a style="text-decoration:none; color:black;" href="/Destination/Details/@Destination.DestinationId">@Destination.DestinationName</a>
+                </td>
+                <td style="padding:10px;">
+                    <a href="/Destination/Edit/@Destination.DestinationId" class="btn btn-primary">Edit</a>
+                </td>
+                <td style="padding:10px;">
+                    <a href="/Destination/DeleteConfirm/@Destination.DestinationId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="display:flex; justify-content:space-between;" class="mt-3">
+    <a href="/Traveler/List" class="btn btn-light border border-1">Go back to Traveler List</a>
+    <a href="/Destination/New" class="btn btn-light border border-1">New Destination</a>
+</div>
